@@ -24,10 +24,6 @@ namespace RestaurantSlots
                 throw new Exception("Date not found");
             }
 
-            log.LogInformation("getting env");
-            log.LogInformation(CosmosDbConnector.Instance.GetEndpoint());
-            log.LogInformation("got env");
-
             IList<Bookings> bookings = await CosmosDbConnector.Instance.GetBookingsForDateAsync(date);
             return new OkObjectResult(bookings);
         }

@@ -46,11 +46,6 @@ namespace RestaurantSlots
             _container = _database.GetContainer("Bookings");
         }
 
-        public string GetEndpoint()
-        {
-            return EndpointUri;
-        }
-
         public async Task<IList<Bookings>> GetBookingsForDateAsync(string date)
         {
             using (FeedIterator<Bookings> setIterator = _container.GetItemLinqQueryable<Bookings>()
