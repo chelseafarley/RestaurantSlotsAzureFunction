@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.Azure.Cosmos;
 using Microsoft.Azure.Cosmos.Linq;
+using Microsoft.Extensions.Logging;
 
 namespace RestaurantSlots
 {
@@ -43,6 +44,11 @@ namespace RestaurantSlots
             _cosmosClient = new CosmosClient(EndpointUri, PrimaryKey, new CosmosClientOptions() { ApplicationName = "RestaurantSlotsAzureFunction" });
             _database = _cosmosClient.GetDatabase("Restaurants");
             _container = _database.GetContainer("Bookings");
+        }
+
+        public string GetEndpoint()
+        {
+            return EndpointUri;
         }
 
         public async Task<IList<Bookings>> GetBookingsForDateAsync(string date)
