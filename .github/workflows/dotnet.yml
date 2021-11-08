@@ -12,8 +12,8 @@ on:
   
 env:
   AZURE_FUNCTIONAPP_NAME: RestaurantSlots # set this to the name of your azure function app resource
-  AZURE_FUNCTION_PROJ_PATH: BookRestaruantSlot  # set this to the path to your function app project
-  AZURE_FUNCTION_PROJ_PATH2: GetRestaruantSlots  # set this to the path to your function app project
+  AZURE_FUNCTION_PROJ_PATH: BookRestaurantSlot  # set this to the path to your function app project
+  AZURE_FUNCTION_PROJ_PATH2: GetRestaurantSlots  # set this to the path to your function app project
 
 jobs:
   build:
