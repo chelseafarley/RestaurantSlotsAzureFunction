@@ -40,7 +40,6 @@ namespace RestaurantSlots
 
         private CosmosDbConnector()
         {
-            var env = Environment.GetEnvironmentVariables();
             _cosmosClient = new CosmosClient(EndpointUri, PrimaryKey, new CosmosClientOptions() { ApplicationName = "RestaurantSlotsAzureFunction" });
             _database = _cosmosClient.GetDatabase("Restaurants");
             _container = _database.GetContainer("Bookings");
