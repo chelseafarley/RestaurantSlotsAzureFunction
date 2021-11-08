@@ -3,9 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.810.11
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GetRestaurantSlots", "GetRestaurantSlots\GetRestaurantSlots.csproj", "{BB29AE6D-989A-41A6-AE98-96619EABFD5E}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookRestaurantSlot", "BookRestaurantSlot\BookRestaurantSlot.csproj", "{4C01134A-DF56-434F-BE64-DA3BE94B0860}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestaurantSlots", "RestaurantSlots\RestaurantSlots.csproj", "{B5D2EA97-029A-48D7-B1DC-B7872EA5C366}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,14 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{BB29AE6D-989A-41A6-AE98-96619EABFD5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BB29AE6D-989A-41A6-AE98-96619EABFD5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BB29AE6D-989A-41A6-AE98-96619EABFD5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BB29AE6D-989A-41A6-AE98-96619EABFD5E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4C01134A-DF56-434F-BE64-DA3BE94B0860}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4C01134A-DF56-434F-BE64-DA3BE94B0860}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4C01134A-DF56-434F-BE64-DA3BE94B0860}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4C01134A-DF56-434F-BE64-DA3BE94B0860}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B5D2EA97-029A-48D7-B1DC-B7872EA5C366}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5D2EA97-029A-48D7-B1DC-B7872EA5C366}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5D2EA97-029A-48D7-B1DC-B7872EA5C366}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5D2EA97-029A-48D7-B1DC-B7872EA5C366}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
