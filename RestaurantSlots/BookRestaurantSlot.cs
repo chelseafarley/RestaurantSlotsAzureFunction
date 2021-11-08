@@ -8,26 +8,21 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 
-namespace BookRestaurantSlot
+namespace RestaurantSlots
 {
     public static class BookRestaurantSlot
     {
         [FunctionName("BookRestaurantSlot")]
         public static async Task<IActionResult> Run(
-            [HttpTrigger(AuthorizationLevel.Anonymous, "get", "post", Route = null)] HttpRequest req,
+            [HttpTrigger(AuthorizationLevel.Anonymous, "post", Route = null)] HttpRequest req,
             ILogger log)
         {
-            log.LogInformation("C# HTTP trigger function processed a request.");
-
-            string name = req.Query["name"];
-
             string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
-            dynamic data = JsonConvert.DeserializeObject(requestBody);
-            name = name ?? data?.name;
+            BookingRequest data = JsonConvert.DeserializeObject<BookingRequest>(requestBody);
 
-            string responseMessage = "test";
+            bool success = await CosmosDbConnector.Instance.UpdateBookingAsync(data);
 
-            return new OkObjectResult(responseMessage);
+            return new OkObjectResult(success);
         }
     }
 }
